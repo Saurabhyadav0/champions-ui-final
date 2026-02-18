@@ -118,6 +118,8 @@ champions-ui/
 
 Optional: run `npm audit fix` to apply non-breaking security updates; review with `npm audit` first.
 
+**If the build fails:** Run `npm install` first, use Node 18+ (`node -v`), and run `npm run build` with no extra characters (e.g. no trailing period). The `prebuild` step checks your Node version.
+
 ## Deployment
 
 No `.env` or environment variables are required. Deployment-ready out of the box.

@@ -19,10 +19,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "node -e \"const n=process.versions.node.split('.'); if(Number(n[0])<18){console.error('Error: Node 18+ required. Current: '+process.version); process.exit(1);}\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "node -e \"require('fs').statSync('build').isDirectory() && console.log('Build OK: build/')\""
+    "postbuild": "node -e \"try { require('fs').statSync('build'); console.log('Build OK: build/'); } catch(e) { console.error('Build failed: build/ missing'); process.exit(1); }\""
   },
   "eslintConfig": {
     "extends": ["react-app", "react-app/jest"]

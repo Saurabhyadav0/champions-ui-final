@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import MainLayout from "../components/MainLayout";
-import Button from "../components/Button";
 
 const Services = () => {
     useEffect(() => {
