@@ -17,10 +17,8 @@ Champions UI is a React-based web application that provides an intuitive interfa
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
-
-- **Node.js** (v14 or higher) - [Download Node.js](https://nodejs.org/)
-- **npm** (comes with Node.js) or **yarn**
+- **Node.js** v18 or higher – [Download Node.js](https://nodejs.org/)
+- **npm** v9 or higher (comes with Node.js)
 
 ## Installation
 
@@ -114,22 +112,32 @@ champions-ui/
 
 ## Building for Production
 
-To create an optimized production build:
+1. Install with locked versions: `npm ci` (or `npm install`).
+2. Create an optimized production build: `npm run build`.
+3. The `build/` directory is ready for deployment. The `postbuild` script verifies the build folder.
 
-```bash
-npm run build
-```
-
-The optimized files will be in the `build/` directory and ready for deployment.
+Optional: run `npm audit fix` to apply non-breaking security updates; review with `npm audit` first.
 
 ## Deployment
 
-The `build/` folder is ready to be deployed to any static hosting service:
+No `.env` or environment variables are required. Deployment-ready out of the box.
 
-- **Vercel**: Connect your repository for automatic deployments
-- **Netlify**: Drag and drop the `build` folder
-- **GitHub Pages**: Push the `build` folder to your gh-pages branch
-- **Traditional Hosting**: Upload the `build` folder contents to your web server
+```bash
+npm ci
+npm run build
+```
+
+Serve or upload the `build/` folder to any static host.
+
+**No environment variables or config required.** Clone, install, build, and deploy.
+
+| Platform      | Notes |
+|---------------|--------|
+| **Vercel**    | Connect repo; `vercel.json` is included (build + SPA rewrites). Deploy with zero config. |
+| **Netlify**   | Build: `npm run build`, publish: `build` |
+| **GitHub Pages** | Build: `npm run build` → deploy `build/` (e.g. gh-pages branch or Action) |
+| **Any static host** | Upload the contents of `build/` to your web server |
+| **Local preview**   | `npx serve -s build` |
 
 ## Learn More
 

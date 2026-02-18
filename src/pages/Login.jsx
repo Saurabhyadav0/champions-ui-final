@@ -29,13 +29,13 @@ const Login = () => {
             <input 
                 type="email" 
                 placeholder="EMAIL ADDRESS" 
-                className="w-full bg-transparent border-b border-gray-600 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors text-xs tracking-widest uppercase"
+                className="w-full min-h-[48px] bg-transparent border-b border-gray-600 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors text-xs tracking-widest uppercase"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
             />
              <input 
                 type="password" 
                 placeholder="PASSWORD" 
-                 className="w-full bg-transparent border-b border-gray-600 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors text-xs tracking-widest uppercase"
+                 className="w-full min-h-[48px] bg-transparent border-b border-gray-600 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors text-xs tracking-widest uppercase"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
             />
         </div>
