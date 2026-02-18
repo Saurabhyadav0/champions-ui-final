@@ -1,5 +1,5 @@
 const Button = ({ label, className = "", style = {}, ...props }) => {
-  const base = "px-10 py-3 text-xs tracking-wide uppercase hover:opacity-90 transition";
+  const base = "min-h-[48px] px-6 md:px-10 py-3 text-xs tracking-wide uppercase hover:opacity-90 transition active:opacity-90";
   const classes = className ? `${className} ${base}` : `bg-accent text-black ${base}`;
 
   return (

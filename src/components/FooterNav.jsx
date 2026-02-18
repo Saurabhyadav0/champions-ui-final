@@ -4,18 +4,18 @@ const links = [
   { name: "Home", path: "/" },
   { name: "Framework", path: "/framework" },
   { name: "Inquiry", path: "/inquiry" },
-  { name: "Insight", path: "/insight" },
+  { name: "Insights", path: "/insights" },
 ];
 
 const FooterNav = () => {
   return (
-    <nav className="py-6 flex justify-center gap-10 text-xs tracking-wide">
+    <nav className="py-4 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] flex flex-wrap justify-center gap-6 md:gap-10 text-xs tracking-wide">
       {links.map(link => (
         <NavLink
           key={link.name}
           to={link.path}
           className={({ isActive }) =>
-            isActive ? "text-accent" : "text-muted"
+            `min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded ${isActive ? "text-accent" : "text-muted hover:text-white"} active:opacity-80`
           }
         >
           {link.name.toUpperCase()}
